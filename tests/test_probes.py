@@ -96,7 +96,7 @@ class TestLiveTargets:
 
 
 def test_username_illegal_regex(sites_info):
-    site: str = 'BitBucket'
+    site: str = 'GitHub'
     invalid_handle: str = '*#$Y&*JRE'
     pattern = re.compile(sites_info[site]['regexCheck'])
     # Ensure that the username actually fails regex before testing sherlock

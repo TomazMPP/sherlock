@@ -1995,3 +1995,118 @@ __2025-07-06 :__ Site appears to have gone offline in March and hasn't come back
     "username_claimed": "GalaxyRG"
   },
 ```
+
+
+## Fork cleanup (2026-11-25)
+
+Removed in the TomazMPP/sherlock fork after validating every site twice: each
+site's `username_claimed` had to be reported as claimed and a random username
+as available. Sites that only failed with a stale `username_claimed` were
+re-checked with common usernames and kept if they worked. Sites blocked by
+anti-bot protection (HTTP 401/403/429, WAF) or timing out were kept, since
+they may work from another IP or through `--proxy`. The original entries are
+in git history (`git show 69ce324:sherlock_project/resources/data.json`).
+
+### Reports every username as claimed, random ones included (48)
+
+| Site | URL |
+|---|---|
+| 7Cups | https://www.7cups.com/ |
+| Airliners | https://www.airliners.net/ |
+| Apple Developer | https://developer.apple.com |
+| Apple Discussions | https://discussions.apple.com |
+| Archive.org | https://archive.org |
+| authorSTREAM | http://www.authorstream.com/ |
+| BabyRu | https://www.baby.ru/ |
+| Bandcamp | https://www.bandcamp.com/ |
+| ChaturBate | https://chaturbate.com |
+| Codolio | https://codolio.com/ |
+| dailykos | https://www.dailykos.com |
+| Envato Forum | https://forums.envato.com/ |
+| F3.cool | https://f3.cool/ |
+| fixya | https://www.fixya.com |
+| GaiaOnline | https://www.gaiaonline.com/ |
+| GeeksforGeeks | https://www.geeksforgeeks.org/ |
+| Giphy | https://giphy.com/ |
+| HackerNews | https://news.ycombinator.com/ |
+| Hashnode | https://hashnode.com |
+| Hubski | https://hubski.com/ |
+| hunting | https://www.hunting.ru/forum/ |
+| igromania | http://forum.igromania.ru/ |
+| Instapaper | https://www.instapaper.com/ |
+| interpals | https://www.interpals.net/ |
+| Memrise | https://www.memrise.com/ |
+| mercadolivre | https://www.mercadolivre.com.br |
+| Odysee | https://odysee.com/ |
+| opennet | https://www.opennet.ru/ |
+| PCGamer | https://pcgamer.com |
+| phpRU | https://php.ru/forum/ |
+| Rarible | https://rarible.com/ |
+| Realmeye | https://www.realmeye.com/ |
+| Reddit | https://www.reddit.com/ |
+| ReverbNation | https://www.reverbnation.com/ |
+| RocketTube | https://www.rockettube.com/ |
+| Scribd | https://www.scribd.com/ |
+| Shelf | https://www.shelf.im/ |
+| SlideShare | https://slideshare.net/ |
+| social.tchncs.de | https://social.tchncs.de/ |
+| Splice | https://splice.com/ |
+| Spotify | https://open.spotify.com/ |
+| TikTok | https://www.tiktok.com |
+| Trakt | https://www.trakt.tv/ |
+| TryHackMe | https://tryhackme.com/ |
+| Velomania | https://forum.velomania.ru/ |
+| Venmo | https://venmo.com/ |
+| Vero | https://vero.co/ |
+| YandexMusic | https://music.yandex |
+
+### Site or probe host is gone (DNS does not resolve, or resolves to a private IP) (7)
+
+| Site | URL |
+|---|---|
+| BreachSta.rs Forum | https://breachsta.rs/ |
+| HubPages | https://hubpages.com/ |
+| Motherless | https://motherless.com/ |
+| RuneScape | https://www.runescape.com/ |
+| satsisRU | https://satsis.info/ |
+| Trovo | https://trovo.live |
+| Twitter | https://x.com/ |
+
+### Never detects existing accounts (404/410/redirect even for known users) (33)
+
+| Site | URL |
+|---|---|
+| 2Dimensions | https://2Dimensions.com/ |
+| BitBucket | https://bitbucket.org/ |
+| Coinvote | https://coinvote.cc/ |
+| Cracked | https://www.cracked.com/ |
+| eGPU | https://egpu.io/ |
+| Fanpop | https://www.fanpop.com/ |
+| freecodecamp | https://www.freecodecamp.org/ |
+| GetMyUni | https://getmyuni.com/ |
+| GNOME VCS | https://gitlab.gnome.org/ |
+| Instructables | https://www.instructables.com/ |
+| Intigriti | https://app.intigriti.com |
+| IRC-Galleria | https://irc-galleria.net/ |
+| irecommend | https://irecommend.ru/ |
+| Kaggle | https://www.kaggle.com/ |
+| Kik | http://kik.me/ |
+| Ninja Kiwi | https://ninjakiwi.com/ |
+| NotABug.org | https://notabug.org/ |
+| ObservableHQ | https://observablehq.com/ |
+| Periscope | https://www.periscope.tv/ |
+| PlayStore | https://play.google.com/store |
+| Polygon | https://www.polygon.com/ |
+| Polymart | https://polymart.org/ |
+| Pychess | https://www.pychess.org |
+| PyPi | https://pypi.org |
+| Roblox | https://www.roblox.com/ |
+| Sbazar.cz | https://www.sbazar.cz/ |
+| Splits.io | https://splits.io |
+| svidbook | https://www.svidbook.ru/ |
+| Topcoder | https://topcoder.com/ |
+| toster | https://www.toster.ru/ |
+| uid | https://uid.me/ |
+| WICG Forum | https://discourse.wicg.io/ |
+| YouPic | https://youpic.com/ |
+
