@@ -27,4 +27,4 @@ __shortname__   = "Sherlock"
 __longname__    = "Sherlock: Find Usernames Across Social Networks"
 __version__     = get_version()
 
-forge_api_latest_release = "https://api.github.com/repos/sherlock-project/sherlock/releases/latest"
+forge_api_latest_release = "https://api.github.com/repos/TomazMPP/sherlock/releases/latest"
