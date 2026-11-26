@@ -92,10 +92,10 @@ options:
   --print-found         Output sites where the username was found (also if exported as file).
   --no-color            Don't color terminal output
   --browse, -b          Browse to all results on default browser.
-  --local, -l           Force the use of the local data.json file.
+  --local, -l           Use the bundled data.json file (the default; overrides --json).
   --nsfw                Include checking of NSFW sites from default list.
   --txt                 Enable creation of a txt file
-  --ignore-exclusions   Ignore upstream exclusions (may return more false positives)
+  --ignore-exclusions   Ignore upstream exclusions when loading a list with --json (may return more false positives)
 ```
 
 ## Credits

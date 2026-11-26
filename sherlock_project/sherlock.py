@@ -667,7 +667,7 @@ def main():
         "-l",
         action="store_true",
         default=False,
-        help="Force the use of the local data.json file.",
+        help="Use the bundled data.json file (the default; overrides --json).",
     )
 
     parser.add_argument(
@@ -690,7 +690,7 @@ def main():
         action="store_true",
         dest="ignore_exclusions",
         default=False,
-        help="Ignore upstream exclusions (may return more false positives)",
+        help="Ignore upstream exclusions when loading a list with --json (may return more false positives)",
     )
 
     args = parser.parse_args()
@@ -736,7 +736,8 @@ def main():
 
     # Create object with all information about sites we are aware of.
     try:
-        if args.local:
+        # The bundled, curated list is the default; --json opts into another list.
+        if args.local or not args.json_file:
             sites = SitesInformation(
                 os.path.join(os.path.dirname(__file__), "resources/data.json"),
                 honor_exclusions=False,
